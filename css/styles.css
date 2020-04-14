@@ -57,6 +57,10 @@ html {
 .blur-text {
   text-shadow: 0 0 8px #000;
 }
+
+nav.navbar-scrolled div.dropdown-menu, nav.navbar-scrolled a.nav-link {
+  background: white !important;
+}
 ul.no-bullet {
     list-style-type: none;
 }
