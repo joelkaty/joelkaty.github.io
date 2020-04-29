@@ -125,6 +125,9 @@ body.fuck-off {
   font-size: 12px;
   color: #777;
 }
+#accessing div {
+  display: none;
+}
 
 
 .x1 {
@@ -334,7 +337,7 @@ body.fuck-off {
 
               <div class="form-label-group">
                 <input type="text" id="inputPassword" class="form-control" placeholder="Password" required autocomplete=off >
-                <label for="inputPassword">Password</label>
+                <label for="inputPassword">Password</label><br><br>
                 <div id="passwordHelp" style="display:none;" class="form-text text-muted" role="alert" aria-atomic="true"></small>
               </div>
 
@@ -342,16 +345,40 @@ body.fuck-off {
 
               <div style="display:none;background:black;border:4px solid #14d10a;color:#14d10a;text-align:center;" id=accessing aria-hidden=true>
                   <br><br>
-                  ⚠️ ACCESSING SYSTEM ⚠️
-                  <br><br><br>
+                  <div id=accessing0>
+                    ⚠️ STARCHING BIG HATS... ⚠️
+                  </div>
+                  <div id=accessing1>
+                    ⚠️ PRE-BOOKING DIVORCE LAWYERS... ⚠️
+                  </div>
+                  <div id=accessing2>
+                    ⚠️ INITIALISING IN-LAWS... ⚠️
+                  </div>
+                  <div id=accessing3>
+                    ⚠️ AWAKENING BAD STAG/HENS... ⚠️
+                  </div>
+                  <div id=accessing4>
+                    ⚠️ WEDDING IS <b>GO<b> ⚠️
+                  </div>
+                  <br><br>
               </div>
               
               <script>
                 console.log("%c🤓 🤓 NEEERRRRDDDD 🤓 🤓", "color:pink;background-color:black;font-size:40px;font-weight:900;");
                 var redir = function(url) {
                     $('#accessing').show();
+                    for(var i = 0; i <= 5; i++) {
+                      if(i==5) {
+                        setTimeout('location.href = "' + url + '"', 6000);
+                      } else {
+                        setTimeout(function(i) {
+                          console.log(i);
+                          $('#accessing div:visible').hide(200);
+                          $('#accessing' + i).show(200);
+                        }, i * 1000, i);
+                      }
+                    }
                     $('#enter-button').hide();
-                    setTimeout('location.href = "' + url + '"', 1000);
                 };
                 var passEl = document.getElementById('inputPassword');
                 var button = document.getElementById('enter');
