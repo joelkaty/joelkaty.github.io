@@ -33,6 +33,7 @@ body {
   background: #007bff;
   background: linear-gradient(to right, #0062E6, #33AEFF);
   background-image: url(assets/img/fuck-off.jpeg);
+  font-family: monospace;
   background-size: cover;
 }
 
@@ -182,27 +183,59 @@ body {
                 <label for="inputPassword">Password</label>
                 <small id="passwordHelp" style="display:none;" class="form-text text-muted"></small>
               </div>
+
+              <div style="display:none;background:black;border:4px solid #14d10a;color:#14d10a;text-align:center;" id=accessing>
+                  <br><br>
+                  ⚠️ ACCESSING SYSTEM ⚠️
+                  <br><br><br>
+              </div>
               
               <script>
+                var redir = function(url) {
+                    $('#accessing').show();
+                    setTimeout('location.href = "' + url + '"', 1000);
+                };
                 var passEl = document.getElementById('inputPassword')
                 passEl.onkeyup = function() {
                   passwd = passEl.value.toLowerCase().replace(/ /g,'');
                   switch(passwd) {
                     case 'fullmonty':
-                      location.href = '/full-monty';
+                    case 'fullmounty':
+                    case 'fulmonty':
+                    case 'monty':
+                      redir('/full-monty');
                     break;
                     case 'makingupthenumbers':
-                      location.href = '/making-up-the-numbers';
+
+                    case 'makinupnumbers':
+                    case 'makingnumbers':
+                    case 'makingthenumbers':
+                    case 'makinnumbers':
+                    case 'makinumbers':
+                      redir('/making-up-the-numbers');
                     break;
                     case 'crimesagainsttempura':
-                      location.href = '/crimes-against-tempura';
+                    case 'crimeagainsttempura':
+                    case 'crimeaginstempure':
+                    case 'crimesagainstempura':
+                    case 'tempura':
+                    case 'crimtem':
+                      redir('/crimes-against-tempura');
+                    break;
+                    case 'goatse':
+                      if(confirm('Are you sure?')) {
+                        redir('http://goatse.ru');
+                      } else {
+                        passEl.value = '';
+                        alert('Wise.');
+                      }
                     break;
                     default:
                       var msg = false;
                       if(passwd.length > 4) {
                         firstChar = passwd.charAt();
                         if(firstChar != 'f' && firstChar != 'm' && firstChar != 'c') {
-                          msg = 'Your password is way off. Are you sure you\'ve been invited?';
+                          msg = 'Your password is way off. Are you sure you\'re invited?';
                         } else {
                           if(passwd.length > 9) {
                             if(passwd.length > 20) {
