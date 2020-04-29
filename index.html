@@ -125,14 +125,183 @@ body.fuck-off {
   color: #777;
 }
 
-.btn-google {
-  color: white;
-  background-color: #ea4335;
+
+.x1 {
+  left: 5%;
+    transform: scale(20);
+    opacity: 0.6;
+    -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
 }
 
-.btn-facebook {
-  color: white;
-  background-color: #3b5998;
+.x2 {
+    left: 23%;
+    transform: scale(13);
+    opacity: 0.9;
+    animation: moveclouds 18s linear infinite, sideWays 5s ease-in-out infinite alternate;
+}
+.x3 {
+    left: 55%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    -webkit-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+.x4 {
+    left: 72%;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+    opacity: 0.9;
+    -webkit-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 18s linear infinite, sideWays 0zs ease-in-out infinite alternate;
+}
+.x5 {
+    left: 88%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3; 
+    -webkit-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+}
+.x6 {
+    left: 33%;
+    opacity: 1; 
+    animation: moveclouds 10s linear infinite, swayWays 9s ease-in-out infinite alternate;
+}
+
+
+.x7 {
+  left: 2%;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.6;
+    -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x8 {
+    left: 27%;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.9;
+    -webkit-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+}
+.x9 {
+    left: 68%;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    transform: scale(2);
+    opacity: 0.8;
+    -webkit-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+.x10 {
+    left: 91%;
+    -webkit-transform: scale(6);
+    -moz-transform: scale(6);
+    transform: scale(6);
+    opacity: 0.9;
+    -webkit-animation: moveclouds 4s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 4s linear infinite, sideWays 7s ease-in-out infinite alternate;
+}
+.x11 {
+    left: 12%;
+    -webkit-transform: scale(3);
+    -moz-transform: scale(3);
+    transform: scale(3);
+    opacity: 0.8; 
+    -webkit-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes moveclouds { 
+    0% { 
+        top: 500px;
+    }
+    100% { 
+        top: -500px;
+    }
+}
+
+@keyframes moveclouds {     
+    0% { 
+        top: 500px;
+    }
+    100% { 
+        top: -500px;
+    }
+}
+
+@-webkit-keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@keyframes sideWays {
+  0% {
+      margin-left:0px;
+  }
+  100% {
+      margin-left:50px;
+  }
+}
+
+@-keyframes swayWays {
+  0% {
+    transform: rotate(12deg);
+    left:-0.3%;
+  }
+  33%{
+    transform: rotate(-2deg);
+    left: 0.7%;
+  }
+  100% {
+    transform: rotate(0deg);
+    left:-12%;
+  }
+}
+
+
+.heart {
+    position: relative;
+}
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 18px;
+    top: 0;
+    width: 18px;
+    height: 30px;
+    background: #CC2022;
+    -moz-border-radius: 20px 50% 0 0;
+    border-radius: 30px 30px 0 0;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
 }
 
 /* Fallback for Edge
@@ -160,16 +329,18 @@ body.fuck-off {
   }
 }
 
+
+
   </style>
 
 </head>
-<body>
-    <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
 
 <body>
   <div class="container">
     <div class="row">
-      <img src="img/fucking-gash-mate.jpg" alt="A romantic couple in an embrace on a beach." class='mt-4 img-thumbnail'>
+      <div class="col-10">
+        <img style="transform: rotate(-10deg);" src="img/fucking-gash-mate.jpg" alt="A romantic couple in an embrace on a beach." class='mt-4 img-thumbnail'>
+      </div>
     </div>
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -193,6 +364,7 @@ body.fuck-off {
               </div>
               
               <script>
+                console.log("%c🤓 🤓 NEEERRRRDDDD 🤓 🤓", "color:pink;background-color:black;font-size:40px;font-weight:900;");
                 var redir = function(url) {
                     $('#accessing').show();
                     $('#enter-button').hide();
@@ -275,9 +447,24 @@ body.fuck-off {
       </div>
     </div>
   </div>
+  <div class="row float-right">
+    <div class="col-10">
+      <img style="transform: rotate(10deg);" src="img/i-resent-building-this-shitty-website.jpeg" alt="Inconsequential wedding tat" class='mt-4 img-thumbnail'>
+    </div>
+  </div>
+  <div class="heart x1"></div>
+  <div class="heart x2"></div>
+  <div class="heart x3"></div>
+  <div class="heart x4"></div>
+  <div class="heart x5"> </div>
+  <div class="heart x6"></div>
+  <div class="heart x7"></div>
+  <div class="heart x8"></div>
+  <div class="heart x9"></div>
+  <div class="heart x10"></div>
+  <div class="heart x11"> </div>
 </body>
 
 
   
-</body>
 </html>
